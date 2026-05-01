@@ -1,0 +1,864 @@
+[
+  {
+    "name": "Afghanistan",
+    "dial_code": "+93",
+    "code": "AF",
+    "nameAr": "أفغانستان",
+    "nameDe": "Afghanistan",
+    "countryQid": "Q889"
+  },
+
+  {
+    "name": "Albania",
+    "dial_code": "+355",
+    "code": "AL",
+    "nameAr": "ألبانيا",
+    "nameDe": "Albanien",
+    "countryQid": "Q222"
+  },
+  {
+    "name": "Algeria",
+    "dial_code": "+213",
+    "code": "DZ",
+    "nameAr": "الجزائر",
+    "nameDe": "Algerien",
+    "countryQid": "Q262"
+  },
+
+  {
+    "name": "Andorra",
+    "dial_code": "+376",
+    "code": "AD",
+    "nameAr": "أندورا",
+    "nameDe": "Andorra",
+    "countryQid": "Q228"
+  },
+  {
+    "name": "Angola",
+    "dial_code": "+244",
+    "code": "AO",
+    "nameAr": "أنغولا",
+    "nameDe": "Angola",
+    "countryQid": "Q916"
+  },
+
+
+  {
+    "name": "Antigua and Barbuda",
+    "dial_code": "+1268",
+    "code": "AG",
+    "nameAr": "أنتيغوا وبربودا",
+    "nameDe": "Antigua und Barbuda",
+    "countryQid": "Q781"
+  },
+  {
+    "name": "Argentina",
+    "dial_code": "+54",
+    "code": "AR",
+    "nameAr": "الأرجنتين",
+    "nameDe": "Argentinien",
+    "countryQid": "Q414"
+  },
+  {
+    "name": "Armenia",
+    "dial_code": "+374",
+    "code": "AM",
+    "nameAr": "أرمينيا",
+    "nameDe": "Armenien",
+    "countryQid": "Q399"
+  },
+
+  {
+    "name": "Australia",
+    "dial_code": "+61",
+    "code": "AU",
+    "nameAr": "أستراليا",
+    "nameDe": "Australien",
+    "countryQid": "Q408"
+  },
+  {
+    "name": "Austria",
+    "dial_code": "+43",
+    "code": "AT",
+    "nameAr": "النمسا",
+    "nameDe": "Österreich",
+    "countryQid": "Q40"
+  },
+  {
+    "name": "Azerbaijan",
+    "dial_code": "+994",
+    "code": "AZ",
+    "nameAr": "أذربيجان",
+    "nameDe": "Aserbaidschan",
+    "countryQid": "Q227"
+  },
+  {
+    "name": "Bahamas",
+    "dial_code": "+1242",
+    "code": "BS",
+    "nameAr": "جزر البهاما",
+    "nameDe": "Bahamas",
+    "countryQid": "Q778"
+  },
+  {
+    "name": "Bahrain",
+    "dial_code": "+973",
+    "code": "BH",
+    "nameAr": "البحرين",
+    "nameDe": "Bahrain",
+    "countryQid": "Q398"
+  },
+  {
+    "name": "Bangladesh",
+    "dial_code": "+880",
+    "code": "BD",
+    "nameAr": "بنغلاديش",
+    "nameDe": "Bangladesch",
+    "countryQid": "Q902"
+  },
+  {
+    "name": "Barbados",
+    "dial_code": "+1246",
+    "code": "BB",
+    "nameAr": "بربادوس",
+    "nameDe": "Barbados",
+    "countryQid": "Q244"
+  },
+  {
+    "name": "Belarus",
+    "dial_code": "+375",
+    "code": "BY",
+    "nameAr": "بيلاروسيا",
+    "nameDe": "Belarus",
+    "countryQid": "Q184"
+  },
+  {
+    "name": "Belgium",
+    "dial_code": "+32",
+    "code": "BE",
+    "nameAr": "بلجيكا",
+    "nameDe": "Belgien",
+    "countryQid": "Q31"
+  },
+  {
+    "name": "Belize",
+    "dial_code": "+501",
+    "code": "BZ",
+    "nameAr": "بليز",
+    "nameDe": "Belize",
+    "countryQid": "Q242"
+  },
+  {
+    "name": "Benin",
+    "dial_code": "+229",
+    "code": "BJ",
+    "nameAr": "بنين",
+    "nameDe": "Benin",
+    "countryQid": "Q962"
+  },
+
+  {
+    "name": "Bhutan",
+    "dial_code": "+975",
+    "code": "BT",
+    "nameAr": "بوتان",
+    "nameDe": "Bhutan",
+    "countryQid": "Q917"
+  },
+  {
+    "name": "Bolivia, Plurinational State of Bolivia",
+    "dial_code": "+591",
+    "code": "BO",
+    "nameAr": "بوليفيا",
+    "nameDe": "Bolivien",
+    "countryQid": "Q750"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "dial_code": "+387",
+    "code": "BA",
+    "nameAr": "البوسنة والهرسك",
+    "nameDe": "Bosnien und Herzegowina",
+    "countryQid": "Q225"
+  },
+  {
+    "name": "Botswana",
+    "dial_code": "+267",
+    "code": "BW",
+    "nameAr": "بوتسوانا",
+    "nameDe": "Botsuana",
+    "countryQid": "Q963"
+  },
+  {
+    "name": "Brazil",
+    "dial_code": "+55",
+    "code": "BR",
+    "nameAr": "البرازيل",
+    "nameDe": "Brasilien",
+    "countryQid": "Q155"
+  },
+  {
+    "name": "Brunei Darussalam",
+    "dial_code": "+673",
+    "code": "BN",
+    "nameAr": "بروناي دار السلام",
+    "nameDe": "Brunei Darussalam",
+    "countryQid": "Q921"
+  },
+  {
+    "name": "Bulgaria",
+    "dial_code": "+359",
+    "code": "BG",
+    "nameAr": "بلغاريا",
+    "nameDe": "Bulgarien",
+    "countryQid": "Q219"
+  },
+  {
+    "name": "Burkina Faso",
+    "dial_code": "+226",
+    "code": "BF",
+    "nameAr": "بوركينا فاسو",
+    "nameDe": "Burkina Faso",
+    "countryQid": "Q965"
+  },
+  {
+    "name": "Burundi",
+    "dial_code": "+257",
+    "code": "BI",
+    "nameAr": "بوروندي",
+    "nameDe": "Burundi",
+    "countryQid": "Q967"
+  },
+  {
+    "name": "Cambodia",
+    "dial_code": "+855",
+    "code": "KH",
+    "nameAr": "كمبوديا",
+    "nameDe": "Kambodscha",
+    "countryQid": "Q424"
+  },
+  {
+    "name": "Cameroon",
+    "dial_code": "+237",
+    "code": "CM",
+    "nameAr": "الكاميرون",
+    "nameDe": "Kamerun",
+    "countryQid": "Q1009"
+  },
+  {
+    "name": "Canada",
+    "dial_code": "+1",
+    "code": "CA",
+    "nameAr": "كندا",
+    "nameDe": "Kanada",
+    "countryQid": "Q16"
+  },
+  {
+    "name": "Central African Republic",
+    "dial_code": "+236",
+    "code": "CF",
+    "nameAr": "جمهورية أفريقيا الوسطى",
+    "nameDe": "Zentralafrikanische Republik",
+    "countryQid": "Q929"
+  },
+  {
+    "name": "Chad",
+    "dial_code": "+235",
+    "code": "TD",
+    "nameAr": "تشاد",
+    "nameDe": "Tschad",
+    "countryQid": "Q657"
+  },
+  {
+    "name": "Chile",
+    "dial_code": "+56",
+    "code": "CL",
+    "nameAr": "تشيلي",
+    "nameDe": "Chile",
+    "countryQid": "Q298"
+  },
+  {
+    "name": "China",
+    "dial_code": "+86",
+    "code": "CN",
+    "nameAr": "الصين",
+    "nameDe": "China",
+    "countryQid": "Q148"
+  },
+  {
+    "name": "Colombia",
+    "dial_code": "+57",
+    "code": "CO",
+    "nameAr": "كولومبيا",
+    "nameDe": "Kolumbien",
+    "countryQid": "Q739"
+  },
+  {
+    "name": "Comoros",
+    "dial_code": "+269",
+    "code": "KM",
+    "nameAr": "جزر القمر",
+    "nameDe": "Komoren",
+    "countryQid": "Q970"
+  },
+  {
+    "name": "Costa Rica",
+    "dial_code": "+506",
+    "code": "CR",
+    "nameAr": "كوستاريكا",
+    "nameDe": "Costa Rica",
+    "countryQid": "Q800"
+  },
+  {
+    "name": "Croatia",
+    "dial_code": "+385",
+    "code": "HR",
+    "nameAr": "كرواتيا",
+    "nameDe": "Kroatien",
+    "countryQid": "Q224"
+  },
+  {
+    "name": "Cuba",
+    "dial_code": "+53",
+    "code": "CU",
+    "nameAr": "كوبا",
+    "nameDe": "Kuba",
+    "countryQid": "Q241"
+  },
+  {
+    "name": "Cyprus",
+    "dial_code": "+357",
+    "code": "CY",
+    "nameAr": "قبرص",
+    "nameDe": "Zypern",
+    "countryQid": "Q229"
+  },
+  {
+    "name": "Czech Republic",
+    "dial_code": "+420",
+    "code": "CZ",
+    "nameAr": "جمهورية التشيك",
+    "nameDe": "Tschechien",
+    "countryQid": "Q213"
+  },
+  {
+    "name": "Denmark",
+    "dial_code": "+45",
+    "code": "DK",
+    "nameAr": "الدنمارك",
+    "nameDe": "Dänemark",
+    "countryQid": "Q35"
+  },
+  {
+    "name": "Djibouti",
+    "dial_code": "+253",
+    "code": "DJ",
+    "nameAr": "جيبوتي",
+    "nameDe": "Dschibuti",
+    "countryQid": "Q977"
+  },
+  {
+    "name": "Dominican Republic",
+    "dial_code": "+1849",
+    "code": "DO",
+    "nameAr": "جمهورية الدومينيكان",
+    "nameDe": "Dominikanische Republik",
+    "countryQid": "Q786"
+  },
+  {
+    "name": "Ecuador",
+    "dial_code": "+593",
+    "code": "EC",
+    "nameAr": "الإكوادور",
+    "nameDe": "Ecuador",
+    "countryQid": "Q736"
+  },
+  {
+    "name": "Egypt",
+    "dial_code": "+20",
+    "code": "EG",
+    "nameAr": "مصر",
+    "nameDe": "Ägypten",
+    "countryQid": "Q79"
+  },
+  {
+    "name": "El Salvador",
+    "dial_code": "+503",
+    "code": "SV",
+    "nameAr": "السلفادور",
+    "nameDe": "El Salvador",
+    "countryQid": "Q792"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "dial_code": "+240",
+    "code": "GQ",
+    "nameAr": "غينيا الاستوائية",
+    "nameDe": "Äquatorialguinea",
+    "countryQid": "Q983"
+  },
+  {
+    "name": "Eritrea",
+    "dial_code": "+291",
+    "code": "ER",
+    "nameAr": "إريتريا",
+    "nameDe": "Eritrea",
+    "countryQid": "Q986"
+  },
+  {
+    "name": "Estonia",
+    "dial_code": "+372",
+    "code": "EE",
+    "nameAr": "إستونيا",
+    "nameDe": "Estland",
+    "countryQid": "Q191"
+  },
+  {
+    "name": "Ethiopia",
+    "dial_code": "+251",
+    "code": "ET",
+    "nameAr": "إثيوبيا",
+    "nameDe": "Äthiopien",
+    "countryQid": "Q115"
+  },
+  {
+    "name": "Finland",
+    "dial_code": "+358",
+    "code": "FI",
+    "nameAr": "فنلندا",
+    "nameDe": "Finnland",
+    "countryQid": "Q33"
+  },
+  {
+    "name": "France",
+    "dial_code": "+33",
+    "code": "FR",
+    "nameAr": "فرنسا",
+    "nameDe": "Frankreich",
+    "countryQid": "Q142"
+  },
+  {
+    "name": "Georgia",
+    "dial_code": "+995",
+    "code": "GE",
+    "nameAr": "جورجيا",
+    "nameDe": "Georgien",
+    "countryQid": "Q230"
+  },
+  {
+    "name": "Germany",
+    "dial_code": "+49",
+    "code": "DE",
+    "nameAr": "ألمانيا",
+    "nameDe": "Deutschland",
+    "countryQid": "Q183"
+  },
+  {
+    "name": "Ghana",
+    "dial_code": "+233",
+    "code": "GH",
+    "nameAr": "غانا",
+    "nameDe": "Ghana",
+    "countryQid": "Q117"
+  },
+  {
+    "name": "Greece",
+    "dial_code": "+30",
+    "code": "GR",
+    "nameAr": "اليونان",
+    "nameDe": "Griechenland",
+    "countryQid": "Q41"
+  },
+  {
+    "name": "India",
+    "dial_code": "+91",
+    "code": "IN",
+    "nameAr": "الهند",
+    "nameDe": "Indien",
+    "countryQid": "Q668"
+  },
+  {
+    "name": "Indonesia",
+    "dial_code": "+62",
+    "code": "ID",
+    "nameAr": "إندونيسيا",
+    "nameDe": "Indonesien",
+    "countryQid": "Q252"
+  },
+  {
+    "name": "Iran, Islamic Republic of",
+    "dial_code": "+98",
+    "code": "IR",
+    "nameAr": "إيران",
+    "nameDe": "Iran",
+    "countryQid": "Q794"
+  },
+  {
+    "name": "Iraq",
+    "dial_code": "+964",
+    "code": "IQ",
+    "nameAr": "العراق",
+    "nameDe": "Irak",
+    "countryQid": "Q796"
+  },
+  {
+    "name": "Ireland",
+    "dial_code": "+353",
+    "code": "IE",
+    "nameAr": "أيرلندا",
+    "nameDe": "Irland",
+    "countryQid": "Q27"
+  },
+  {
+    "name": "Israel",
+    "dial_code": "+972",
+    "code": "IL",
+    "nameAr": "إسرائيل",
+    "nameDe": "Israel",
+    "countryQid": "Q801"
+  },
+  {
+    "name": "Italy",
+    "dial_code": "+39",
+    "code": "IT",
+    "nameAr": "إيطاليا",
+    "nameDe": "Italien",
+    "countryQid": "Q38"
+  },
+  {
+    "name": "Japan",
+    "dial_code": "+81",
+    "code": "JP",
+    "nameAr": "اليابان",
+    "nameDe": "Japan",
+    "countryQid": "Q17"
+  },
+  {
+    "name": "Jordan",
+    "dial_code": "+962",
+    "code": "JO",
+    "nameAr": "الأردن",
+    "nameDe": "Jordanien",
+    "countryQid": "Q810"
+  },
+  {
+    "name": "Kenya",
+    "dial_code": "+254",
+    "code": "KE",
+    "nameAr": "كينيا",
+    "nameDe": "Kenia",
+    "countryQid": "Q114"
+  },
+  {
+    "name": "Kuwait",
+    "dial_code": "+965",
+    "code": "KW",
+    "nameAr": "الكويت",
+    "nameDe": "Kuwait",
+    "countryQid": "Q817"
+  },
+  {
+    "name": "Lebanon",
+    "dial_code": "+961",
+    "code": "LB",
+    "nameAr": "لبنان",
+    "nameDe": "Libanon",
+    "countryQid": "Q822"
+  },
+  {
+    "name": "Libya",
+    "dial_code": "+218",
+    "code": "LY",
+    "nameAr": "ليبيا",
+    "nameDe": "Libyen",
+    "countryQid": "Q1016"
+  },
+  {
+    "name": "Malaysia",
+    "dial_code": "+60",
+    "code": "MY",
+    "nameAr": "ماليزيا",
+    "nameDe": "Malaysia",
+    "countryQid": "Q833"
+  },
+  {
+    "name": "Mexico",
+    "dial_code": "+52",
+    "code": "MX",
+    "nameAr": "المكسيك",
+    "nameDe": "Mexiko",
+    "countryQid": "Q96"
+  },
+  {
+    "name": "Morocco",
+    "dial_code": "+212",
+    "code": "MA",
+    "nameAr": "المغرب",
+    "nameDe": "Marokko",
+    "countryQid": "Q1028"
+  },
+  {
+    "name": "Netherlands",
+    "dial_code": "+31",
+    "code": "NL",
+    "nameAr": "هولندا",
+    "nameDe": "Niederlande",
+    "countryQid": "Q55"
+  },
+  {
+    "name": "New Zealand",
+    "dial_code": "+64",
+    "code": "NZ",
+    "nameAr": "نيوزيلندا",
+    "nameDe": "Neuseeland",
+    "countryQid": "Q664"
+  },
+  {
+    "name": "Nigeria",
+    "dial_code": "+234",
+    "code": "NG",
+    "nameAr": "نيجيريا",
+    "nameDe": "Nigeria",
+    "countryQid": "Q1033"
+  },
+  {
+    "name": "Norway",
+    "dial_code": "+47",
+    "code": "NO",
+    "nameAr": "النرويج",
+    "nameDe": "Norwegen",
+    "countryQid": "Q20"
+  },
+  {
+    "name": "Oman",
+    "dial_code": "+968",
+    "code": "OM",
+    "nameAr": "عمان",
+    "nameDe": "Oman",
+    "countryQid": "Q842"
+  },
+  {
+    "name": "Pakistan",
+    "dial_code": "+92",
+    "code": "PK",
+    "nameAr": "باكستان",
+    "nameDe": "Pakistan",
+    "countryQid": "Q843"
+  },
+  {
+    "name": "Palestine",
+    "dial_code": "+970",
+    "code": "PS",
+    "nameAr": "فلسطين",
+    "nameDe": "Palästina",
+    "countryQid": "Q219060"
+  },
+  {
+    "name": "Peru",
+    "dial_code": "+51",
+    "code": "PE",
+    "nameAr": "بيرو",
+    "nameDe": "Peru",
+    "countryQid": "Q419"
+  },
+  {
+    "name": "Philippines",
+    "dial_code": "+63",
+    "code": "PH",
+    "nameAr": "الفلبين",
+    "nameDe": "Philippinen",
+    "countryQid": "Q928"
+  },
+  {
+    "name": "Poland",
+    "dial_code": "+48",
+    "code": "PL",
+    "nameAr": "بولندا",
+    "nameDe": "Polen",
+    "countryQid": "Q36"
+  },
+  {
+    "name": "Portugal",
+    "dial_code": "+351",
+    "code": "PT",
+    "nameAr": "البرتغال",
+    "nameDe": "Portugal",
+    "countryQid": "Q45"
+  },
+  {
+    "name": "Qatar",
+    "dial_code": "+974",
+    "code": "QA",
+    "nameAr": "قطر",
+    "nameDe": "Katar",
+    "countryQid": "Q846"
+  },
+  {
+    "name": "Romania",
+    "dial_code": "+40",
+    "code": "RO",
+    "nameAr": "رومانيا",
+    "nameDe": "Rumänien",
+    "countryQid": "Q218"
+  },
+  {
+    "name": "Russia",
+    "dial_code": "+7",
+    "code": "RU",
+    "nameAr": "روسيا",
+    "nameDe": "Russland",
+    "countryQid": "Q159"
+  },
+  {
+    "name": "Saudi Arabia",
+    "dial_code": "+966",
+    "code": "SA",
+    "nameAr": "المملكة العربية السعودية",
+    "nameDe": "Saudi-Arabien",
+    "countryQid": "Q851"
+  },
+  {
+    "name": "Singapore",
+    "dial_code": "+65",
+    "code": "SG",
+    "nameAr": "سنغافورة",
+    "nameDe": "Singapur",
+    "countryQid": "Q334"
+  },
+  {
+    "name": "South Africa",
+    "dial_code": "+27",
+    "code": "ZA",
+    "nameAr": "جنوب أفريقيا",
+    "nameDe": "Südafrika",
+    "countryQid": "Q258"
+  },
+  {
+    "name": "South Korea",
+    "dial_code": "+82",
+    "code": "KR",
+    "nameAr": "كوريا الجنوبية",
+    "nameDe": "Südkorea",
+    "countryQid": "Q884"
+  },
+  {
+    "name": "Spain",
+    "dial_code": "+34",
+    "code": "ES",
+    "nameAr": "إسبانيا",
+    "nameDe": "Spanien",
+    "countryQid": "Q29"
+  },
+  {
+    "name": "Sweden",
+    "dial_code": "+46",
+    "code": "SE",
+    "nameAr": "السويد",
+    "nameDe": "Schweden",
+    "countryQid": "Q34"
+  },
+  {
+    "name": "Switzerland",
+    "dial_code": "+41",
+    "code": "CH",
+    "nameAr": "سويسرا",
+    "nameDe": "Schweiz",
+    "countryQid": "Q39"
+  },
+  {
+    "name": "Syria",
+    "dial_code": "+963",
+    "code": "SY",
+    "nameAr": "سوريا",
+    "nameDe": "Syrien",
+    "countryQid": "Q858"
+  },
+  {
+    "name": "Thailand",
+    "dial_code": "+66",
+    "code": "TH",
+    "nameAr": "تايلاند",
+    "nameDe": "Thailand",
+    "countryQid": "Q869"
+  },
+  {
+    "name": "Tunisia",
+    "dial_code": "+216",
+    "code": "TN",
+    "nameAr": "تونس",
+    "nameDe": "Tunesien",
+    "countryQid": "Q948"
+  },
+  {
+    "name": "Turkey",
+    "dial_code": "+90",
+    "code": "TR",
+    "nameAr": "تركيا",
+    "nameDe": "Türkei",
+    "countryQid": "Q43"
+  },
+  {
+    "name": "Ukraine",
+    "dial_code": "+380",
+    "code": "UA",
+    "nameAr": "أوكرانيا",
+    "nameDe": "Ukraine",
+    "countryQid": "Q212"
+  },
+  {
+    "name": "United Arab Emirates",
+    "dial_code": "+971",
+    "code": "AE",
+    "nameAr": "الإمارات العربية المتحدة",
+    "nameDe": "Vereinigte Arabische Emirate",
+    "countryQid": "Q878"
+  },
+  {
+    "name": "United Kingdom",
+    "dial_code": "+44",
+    "code": "GB",
+    "nameAr": "المملكة المتحدة",
+    "nameDe": "Vereinigtes Königreich",
+    "countryQid": "Q145"
+  },
+  {
+    "name": "United States",
+    "dial_code": "+1",
+    "code": "US",
+    "nameAr": "الولايات المتحدة",
+    "nameDe": "Vereinigte Staaten",
+    "countryQid": "Q30"
+  },
+  {
+    "name": "Vietnam",
+    "dial_code": "+84",
+    "code": "VN",
+    "nameAr": "فيتنام",
+    "nameDe": "Vietnam",
+    "countryQid": "Q881"
+  },
+  {
+    "name": "Yemen",
+    "dial_code": "+967",
+    "code": "YE",
+    "nameAr": "اليمن",
+    "nameDe": "Jemen",
+    "countryQid": "Q805"
+  },
+  {
+    "name": "Zambia",
+    "dial_code": "+260",
+    "code": "ZM",
+    "nameAr": "زامبيا",
+    "nameDe": "Sambia",
+    "countryQid": "Q953"
+  },
+  {
+    "name": "Zimbabwe",
+    "dial_code": "+263",
+    "code": "ZW",
+    "nameAr": "زيمبابوي",
+    "nameDe": "Simbabwe",
+    "countryQid": "Q954"
+  }
+]

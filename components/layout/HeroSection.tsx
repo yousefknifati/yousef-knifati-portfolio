@@ -1,17 +1,33 @@
 "use client";
 
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
+import AppImage from "@/components/shared/AppImage";
 import { useI18n } from "@/providers/I18nProvider";
 
-const portraitUrl =
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85";
+const portraitUrl = "/front.jpg";
 
 const navKeys = [
   "home.nav.about",
   "home.nav.skills",
   "home.nav.portfolio",
   "home.nav.testimonial",
+];
+
+const statistics = [
+  {
+    value: "80+",
+    labelKey: "home.stats.satisfiedClients",
+  },
+  {
+    value: "200+",
+    labelKey: "home.stats.projectsCompleted",
+  },
+  {
+    value: "99+",
+    labelKey: "home.stats.reviewsGiven",
+  },
 ];
 
 const dots = [
@@ -49,29 +65,29 @@ export default function HeroSection() {
       </div>
 
       <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-8 sm:px-10 lg:px-14">
-        <a href="#" className="flex items-center gap-3" aria-label="T Agency">
+        <Link href="#" className="flex items-center gap-3" aria-label="T Agency">
           <span className="flex size-11 items-center justify-center rounded-lg bg-primary text-3xl font-black leading-none text-white">
             t
           </span>
           <span className="text-2xl font-bold text-primary">
             {t("home.brand")}
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-10 text-sm font-semibold text-foreground md:flex">
           {navKeys.map((key) => (
-            <a key={key} href="#" className="transition-colors hover:text-primary">
+            <Link key={key} href="#" className="transition-colors hover:text-primary">
               {t(key)}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <a
+        <Link
           href="#"
           className="rounded-lg border-2 border-primary px-5 py-3 text-sm font-bold text-foreground transition-colors hover:bg-primary hover:text-white"
         >
           {t("home.downloadCv")}
-        </a>
+        </Link>
       </header>
 
       <section className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-6 pb-12 pt-6 sm:px-10 lg:grid-cols-[1fr_0.95fr] lg:px-14 lg:pb-20 lg:pt-10">
@@ -93,29 +109,32 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-7">
-            <a
+            <Link
               href="#"
               className="rounded-lg bg-primary px-7 py-4 text-sm font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
             >
               {t("home.contactMe")}
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="inline-flex items-center gap-2 text-sm font-bold text-foreground transition-colors hover:text-primary"
             >
               {t("home.viewPortfolio")}
               <FiArrowUpRight className="text-xl text-primary" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="relative mx-auto flex w-full max-w-[520px] justify-center lg:justify-end">
           <div className="absolute left-3 top-14 h-[72%] w-[78%] border-4 border-foreground sm:left-0 sm:top-16" />
-          <div
-            role="img"
-            aria-label={t("home.portraitAlt")}
-            className="relative mr-0 mt-2 aspect-[1/1] w-[78%] min-w-[280px] overflow-hidden bg-primary bg-cover bg-center sm:min-w-[340px] lg:mr-4"
-            style={{ backgroundImage: `url(${portraitUrl})` }}
+          <AppImage
+            src={portraitUrl}
+            alt={t("home.portraitAlt")}
+            fill
+            priority
+            sizes="(min-width: 1024px) 405px, (min-width: 640px) 340px, 280px"
+            wrapperClassName="relative mr-0 mt-2 aspect-[1/1] w-[78%] min-w-[280px] bg-primary sm:min-w-[340px] lg:mr-4"
+            className="object-cover object-center"
           />
         </div>
       </section>
@@ -125,16 +144,54 @@ export default function HeroSection() {
           {t("home.followMe")}
         </span>
         <span className="h-14 w-px bg-primary/40" aria-hidden="true" />
-        <a href="#" aria-label="Facebook" className="rounded bg-primary p-1.5 text-white">
+        <Link href="#" aria-label="Facebook" className="rounded bg-primary p-1.5 text-white">
           <FaFacebookF className="size-3.5" />
-        </a>
-        <a href="#" aria-label="Instagram" className="rounded bg-primary p-1.5 text-white">
+        </Link>
+        <Link href="#" aria-label="Instagram" className="rounded bg-primary p-1.5 text-white">
           <FaInstagram className="size-3.5" />
-        </a>
-        <a href="#" aria-label="LinkedIn" className="rounded bg-primary p-1.5 text-white">
+        </Link>
+        <Link href="#" aria-label="LinkedIn" className="rounded bg-primary p-1.5 text-white">
           <FaLinkedinIn className="size-3.5" />
-        </a>
+        </Link>
       </aside>
+
+      <section className="relative z-10 bg-background px-6 py-14 sm:px-10 lg:px-14">
+        <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-3 md:gap-0">
+          {statistics.map((item, index) => (
+            <div
+              key={item.labelKey}
+              className="relative flex flex-col items-center text-center md:items-start md:text-start"
+            >
+              {index > 0 && (
+                <span
+                  aria-hidden="true"
+                  className="absolute -left-12 top-1/2 hidden h-20 w-px -translate-y-1/2 bg-primary md:block"
+                />
+              )}
+              <p className="text-5xl font-extrabold leading-none text-primary sm:text-6xl">
+                {item.value}
+              </p>
+              <p className="mt-5 text-2xl font-medium leading-tight text-foreground sm:text-3xl">
+                {t(item.labelKey)}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div
+          aria-hidden="true"
+          className="absolute bottom-4 right-5 grid grid-cols-3 gap-1.5"
+        >
+          {Array.from({ length: 15 }, (_, index) => (
+            <span
+              key={index}
+              className={`size-1.5 rounded-full ${
+                index % 3 === 2 ? "bg-primary" : "bg-red-500"
+              }`}
+            />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

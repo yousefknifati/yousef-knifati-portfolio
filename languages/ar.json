@@ -14,5 +14,8 @@
   "home.contactMe": "تواصل معي",
   "home.viewPortfolio": "عرض الأعمال",
   "home.followMe": "تابعني على:",
-  "home.portraitAlt": "صورة مصمم مبتسم"
+  "home.portraitAlt": "صورة مصمم مبتسم",
+  "home.stats.satisfiedClients": "عملاء راضون",
+  "home.stats.projectsCompleted": "مشاريع مكتملة",
+  "home.stats.reviewsGiven": "تقييمات مقدمة"
 }

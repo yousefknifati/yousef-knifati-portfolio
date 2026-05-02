@@ -14,5 +14,8 @@
   "home.contactMe": "Contact Me",
   "home.viewPortfolio": "View Portfolio",
   "home.followMe": "Follow me on:",
-  "home.portraitAlt": "Smiling designer portrait"
+  "home.portraitAlt": "Smiling designer portrait",
+  "home.stats.satisfiedClients": "Satisfied clients",
+  "home.stats.projectsCompleted": "Projects completed",
+  "home.stats.reviewsGiven": "Reviews given"
 }

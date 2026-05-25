@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITECT.DEV | Creative Frontend Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(40, 71, 243, 0.3);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #cursor-follower {
+            pointer-events: none;
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: #2847F3;
+            border-radius: 50%;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#444656",
+                      "outline": "#8e8fa2",
+                      "error-container": "#93000a",
+                      "neon-green": "#00C853",
+                      "inverse-on-surface": "#313030",
+                      "surface-onyx": "#121212",
+                      "primary-fixed": "#dfe0ff",
+                      "on-background": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-container": "#004d1b",
+                      "text-secondary": "#A1A1AA",
+                      "on-tertiary-fixed-variant": "#6900b3",
+                      "error": "#ffb4ab",
+                      "surface-container-lowest": "#0e0e0e",
+                      "tertiary-fixed": "#f0dbff",
+                      "on-primary-fixed-variant": "#002bd0",
+                      "tertiary-fixed-dim": "#ddb7ff",
+                      "on-surface-variant": "#c5c5d9",
+                      "on-secondary": "#003912",
+                      "secondary-container": "#02c953",
+                      "primary-fixed-dim": "#bbc3ff",
+                      "electric-blue": "#2847F3",
+                      "surface-tint": "#bbc3ff",
+                      "surface-container-highest": "#353534",
+                      "secondary-fixed-dim": "#3ce36a",
+                      "background": "#131313",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container": "#201f1f",
+                      "on-tertiary-container": "#ead0ff",
+                      "surface-variant": "#353534",
+                      "surface": "#131313",
+                      "on-secondary-fixed": "#002108",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary-container": "#d3d7ff",
+                      "surface-container-high": "#2a2a2a",
+                      "tertiary": "#ddb7ff",
+                      "on-tertiary": "#490080",
+                      "secondary": "#40e56c",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#842cd3",
+                      "text-primary": "#FFFFFF",
+                      "secondary-fixed": "#69ff87",
+                      "primary-container": "#2847f3",
+                      "on-primary-fixed": "#000e5e",
+                      "on-primary": "#001c95",
+                      "on-secondary-fixed-variant": "#00531e",
+                      "inverse-primary": "#2746f2",
+                      "on-surface": "#e5e2e1",
+                      "vivid-purple": "#A855F7",
+                      "surface-bright": "#3a3939",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#2c0051",
+                      "primary": "#bbc3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "section-padding-mobile": "64px",
+                      "container-max": "1280px",
+                      "section-padding-desktop": "120px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-xl": ["Plus Jakarta Sans"],
+                      "body-md": ["JetBrains Mono"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["JetBrains Mono"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "label-sm": ["JetBrains Mono"],
+                      "headline-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background selection:bg-electric-blue selection:text-white">
+<div class="hidden md:block" id="cursor-follower"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+<a class="font-display-xl text-headline-md font-bold text-text-primary tracking-tighter" href="#">ARCHITECT.DEV</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-body-md text-body-md text-electric-blue font-bold border-b-2 border-electric-blue pb-1" href="#work">Work</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-text-primary transition-colors duration-300" href="#experience">Experience</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-text-primary transition-colors duration-300" href="#stack">Stack</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-electric-blue hover:bg-vivid-purple text-white px-8 py-3 font-display-xl font-bold rounded-lg transition-all duration-300 active:scale-95">
+                Resume
+            </button>
+</div>
+</nav>
+<!-- Side Navigation (Mobile/Docked Style) -->
+<aside class="fixed left-0 top-0 h-screen flex flex-col items-center py-base z-40 bg-surface-onyx border-r border-outline-variant w-20 lg:hidden hidden md:flex">
+<div class="mb-auto mt-24">
+<img alt="Profile" class="w-12 h-12 rounded-full border-2 border-electric-blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyVcb3WDPuG4O1bIorgJMkXT2Q886-Ii0oToPwOYXL8X8PhRPfsGfhr3vUkpZiQIDokRVkL0HpN3AqyRDsczIOTLSVcTpZU00pLcqRJhXXkuH1pWMpN-vkSKwWGgn8ZX4uxjEPS5VbUzPVg5Dkh1zVVdhCVJcyAjwjOFmcWqcu9ofeFKu6Dw3GAKnvbXRVS1FsFlME3qWjA_wkUgegHfL0sE9RsqgIGBCuzpiE86We3vy__T9xojjRCFZTIycL0o8qO4Bnt6sYMqw"/>
+</div>
+<div class="flex flex-col gap-8 mb-auto">
+<a class="bg-electric-blue text-white rounded-full p-3 transition-transform active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="text-text-secondary p-3 hover:bg-white/5 transition-colors" href="#work">
+<span class="material-symbols-outlined">grid_view</span>
+</a>
+<a class="text-text-secondary p-3 hover:bg-white/5 transition-colors" href="#resume">
+<span class="material-symbols-outlined">description</span>
+</a>
+<a class="text-text-secondary p-3 hover:bg-white/5 transition-colors" href="#contact">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</aside>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center items-start px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-electric-blue/10 rounded-full blur-[120px]"></div>
+<div class="relative z-10 w-full">
+<p class="font-body-md text-electric-blue mb-6 tracking-widest font-medium uppercase reveal-up">Available for freelance &amp; full-time</p>
+<h1 class="font-display-xl text-display-xl max-w-5xl leading-none mb-8 reveal-up">
+                    ARCHITECTING <span class="text-stroke">DIGITAL</span> EXPERIENCES.
+                </h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mb-12 reveal-up" style="transition-delay: 100ms;">
+                    Senior Frontend Engineer specializing in high-performance web architectures. I bridge the gap between creative vision and technical precision using modern stacks.
+                </p>
+<div class="flex flex-wrap gap-6 reveal-up" style="transition-delay: 200ms;">
+<button class="bg-electric-blue hover:bg-vivid-purple text-white px-10 py-5 font-headline-md rounded-xl flex items-center gap-3 transition-all duration-300">
+                        View Projects <span class="material-symbols-outlined">arrow_outward</span>
+</button>
+<button class="border border-white/20 hover:border-white text-white px-10 py-5 font-headline-md rounded-xl transition-all duration-300 font-body-md">
+                        &gt; Let's Connect
+                    </button>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute bottom-0 right-0 opacity-10 pointer-events-none select-none">
+<span class="font-display-xl text-[240px] font-extrabold tracking-tighter leading-none block">CREATIVE</span>
+<span class="font-display-xl text-[240px] font-extrabold tracking-tighter leading-none block text-stroke ml-32">ARCHITECT</span>
+</div>
+</section>
+<!-- Selected Works (Matveyan Style) -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto" id="work">
+<div class="flex justify-between items-end mb-24 reveal-up">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Selected Works</h2>
+<p class="font-body-md text-text-secondary uppercase tracking-widest">Architecting complex financial systems</p>
+</div>
+<a class="font-body-md text-electric-blue hover:underline hidden md:block" href="#">See All Projects</a>
+</div>
+<div class="space-y-32">
+<!-- Project 1: Fintech Design System -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-up">
+<div class="order-2 md:order-1">
+<span class="font-body-md text-electric-blue uppercase tracking-widest block mb-4">Fintech Design System</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg mb-6 leading-tight">Empowering scalable financial products</h3>
+<p class="font-body-lg text-text-secondary mb-10 max-w-lg">A scalable fintech design system for mobile and web products, built to improve consistency and speed up delivery.</p>
+<div class="flex gap-4 mb-10">
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">UI/UX</span>
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">Design System</span>
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">React</span>
+</div>
+<a class="inline-flex items-center gap-4 bg-white text-black px-10 py-5 font-headline-md rounded-xl hover:bg-electric-blue hover:text-white transition-all duration-500" href="#">
+                        VIEW CASE <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="order-1 md:order-2 group">
+<div class="overflow-hidden rounded-2xl glass-card p-2">
+<img alt="Fintech Design System" class="w-full h-auto rounded-xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFhn2kdzS1tI7kK5n1XlgEe2LRVCxkbLHSOtmREqq4s2vVWb26YqopdHa5i62D98XApJCG79HGEgEJUVie_7rjq0QmCP9SMDkcLVUDCAqP5Jc8T_GxlMU0NRVku5dMSOcDG44GyrGCy6veb9wOhOhh1qToE6iGfN_iWv5X4e9qfGB7-ua2RYHzW4vPk1uADVbi2K0Bqz_DZtnq4L0w_9Cdv5kZT-3GUlPdlEyv8Lwre8GtUUSwPq1OxibyT2FmLR_7pP5uQYUoevQ"/>
+</div>
+</div>
+</div>
+<!-- Project 2: CrocoWallet -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-up">
+<div class="order-1 group">
+<div class="overflow-hidden rounded-2xl glass-card p-2">
+<img alt="CrocoWallet" class="w-full h-auto rounded-xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3-aqo2UtDxjx5cKvaCf3xhksjGA23Q6yWAMVh8BiK2dR6IPmL222yNrnxnCqM6Chiopk_iSFORzn3t03QyhZi0c7695JSJikyBJmzC1QGJoK4C6agruJjoQDzOB_Km9PlfdPw1w6RQI-AZJ9vcPwTFkSzDMaLKKa0U6AvhlFv-ZDLOmi5j5NPAJTMZjqe0CBr8mKxd3g9zltq0P4ITfcnEYEpCymZNanjB1RUAxn3sZo7T89xWHnh0poXKG0gtQLsn73ryh8GYWo"/>
+</div>
+</div>
+<div class="order-2">
+<span class="font-body-md text-electric-blue uppercase tracking-widest block mb-4">CrocoWallet</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg mb-6 leading-tight">Crypto banking within Telegram</h3>
+<p class="font-body-lg text-text-secondary mb-10 max-w-lg">A Telegram-based crypto banking mini app with card issuance, wallet management, and referral flows.</p>
+<div class="flex gap-4 mb-10">
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">App Design</span>
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">Fintech</span>
+</div>
+<a class="inline-flex items-center gap-4 bg-white text-black px-10 py-5 font-headline-md rounded-xl hover:bg-electric-blue hover:text-white transition-all duration-500" href="#">
+                        VIEW CASE <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Project 3: Crypto Portfolio -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-up">
+<div class="order-2 md:order-1">
+<span class="font-body-md text-electric-blue uppercase tracking-widest block mb-4">Crypto Portfolio</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg mb-6 leading-tight">Monitoring the digital market</h3>
+<p class="font-body-lg text-text-secondary mb-10 max-w-lg">A crypto portfolio and wallet app for tracking assets, monitoring market movement, and managing balances.</p>
+<div class="flex gap-4 mb-10">
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">Dashboard</span>
+<span class="border border-white/10 px-4 py-2 rounded-full text-label-sm uppercase">Web3</span>
+</div>
+<a class="inline-flex items-center gap-4 bg-white text-black px-10 py-5 font-headline-md rounded-xl hover:bg-electric-blue hover:text-white transition-all duration-500" href="#">
+                        VIEW CASE <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="order-1 md:order-2 group">
+<div class="overflow-hidden rounded-2xl glass-card p-2">
+<img alt="Crypto Portfolio" class="w-full h-auto rounded-xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3F25G-uYlE2DWoNlNOoGd69RJPUhwLDG6IVheDPwOUkviZhEISotZwtLqqLXoEBQmT39wN9v1Qzkwu778bcQVJNK41zfGDtnfxlBjFQcHAp1S9-_3nfIVmFiBFIEIElo5cx1Rh5u6dj7V8qGIBHAtxrPaw5Jg-nOTLwlcf4eK7I3KzgzbSYSKwGkn7FiB8zEGTN5MbCNo0yWccjv2NWjj9B8WnWl2pOgsKa8hsLbBz6sJ-9r5pk-KYrQ1Bj_KjWF5QRACApj0HIM"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-section-padding-desktop bg-surface-onyx/50" id="experience">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3 reveal-up">
+<h2 class="font-headline-lg text-headline-lg mb-6 leading-tight">THE JOURNEY OF BUILDING.</h2>
+<p class="font-body-md text-text-secondary">Over 8 years of crafting digital experiences across various industries, from startups to global leaders.</p>
+</div>
+<div class="md:w-2/3 flex flex-col gap-12">
+<!-- Job 1 -->
+<div class="group border-b border-white/10 pb-12 reveal-up">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md text-text-primary group-hover:text-electric-blue transition-colors">Senior Frontend Architect</h4>
+<p class="font-body-md text-text-secondary">TechNova Systems</p>
+</div>
+<span class="font-body-md text-text-secondary">2021 — PRESENT</span>
+</div>
+<p class="font-body-md text-text-secondary max-w-xl">Leading the frontend department in developing high-scale applications and implementing core design systems.</p>
+</div>
+<!-- Job 2 -->
+<div class="group border-b border-white/10 pb-12 reveal-up">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md text-text-primary group-hover:text-electric-blue transition-colors">Lead Web Developer</h4>
+<p class="font-body-md text-text-secondary">Creative Agency X</p>
+</div>
+<span class="font-body-md text-text-secondary">2018 — 2021</span>
+</div>
+<p class="font-body-md text-text-secondary max-w-xl">Focused on immersive interactive experiences for global brands, pushing the boundaries of WebGL and motion.</p>
+</div>
+<!-- Job 3 -->
+<div class="group border-b border-white/10 pb-12 reveal-up">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="font-headline-md text-headline-md text-text-primary group-hover:text-electric-blue transition-colors">Frontend Developer</h4>
+<p class="font-body-md text-text-secondary">Startup Seed</p>
+</div>
+<span class="font-body-md text-text-secondary">2016 — 2018</span>
+</div>
+<p class="font-body-md text-text-secondary max-w-xl">Rapid prototyping and building user-centric interfaces for emerging fintech solutions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto" id="stack">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 reveal-up">THE ARSENAL</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Tech Item -->
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">javascript</span>
+<span class="font-body-md text-text-primary">Javascript</span>
+</div>
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up" style="transition-delay: 50ms;">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">code</span>
+<span class="font-body-md text-text-primary">React / Next</span>
+</div>
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">terminal</span>
+<span class="font-body-md text-text-primary">Node.js</span>
+</div>
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">palette</span>
+<span class="font-body-md text-text-primary">Tailwind CSS</span>
+</div>
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">token</span>
+<span class="font-body-md text-text-primary">TypeScript</span>
+</div>
+<div class="glass-card p-8 flex flex-col items-center justify-center gap-4 rounded-xl hover:border-electric-blue transition-all duration-300 group reveal-up" style="transition-delay: 250ms;">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-electric-blue">animation</span>
+<span class="font-body-md text-text-primary">Framer Motion</span>
+</div>
+</div>
+</section>
+<!-- Contact / Footer -->
+<section class="py-section-padding-desktop border-t border-white/10 bg-surface-onyx" id="contact">
+<div class="px-gutter max-w-container-max mx-auto text-center">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-display-xl mb-8 reveal-up">HAVE A PROJECT IN MIND?</h2>
+<a class="font-display-xl text-headline-lg-mobile md:text-headline-lg text-electric-blue hover:text-vivid-purple transition-colors duration-300 block mb-12 reveal-up" href="mailto:hello@architect.dev">hello@architect.dev</a>
+<div class="flex justify-center gap-8 mb-20 reveal-up">
+<a class="font-body-md text-text-secondary hover:text-text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">LinkedIn</a>
+<a class="font-body-md text-text-secondary hover:text-text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">GitHub</a>
+<a class="font-body-md text-text-secondary hover:text-text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">Twitter</a>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-base border-t border-white/5 pt-12">
+<p class="font-label-sm text-label-sm text-text-secondary">© 2024 Built with Precision &amp; Passion.</p>
+<div class="flex gap-gutter">
+<a class="font-label-sm text-label-sm text-text-secondary hover:text-vivid-purple transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-text-secondary hover:text-vivid-purple transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+        // Cursor Follower
+        const cursor = document.getElementById('cursor-follower');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform += ' scale(2.5)';
+                cursor.style.background = '#FFFFFF';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = cursor.style.transform.replace(' scale(2.5)', '');
+                cursor.style.background = '#2847F3';
+            });
+        });
+
+        // Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Parallax Effect for Background Text
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const bgText = document.querySelectorAll('.text-stroke');
+            bgText.forEach((t, i) => {
+                const speed = 0.2 + (i * 0.1);
+                t.style.transform = `translateX(${scroll * speed}px)`;
+            });
+        });
+    </script>
+</body></html>
